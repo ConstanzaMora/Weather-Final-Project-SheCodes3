@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Train+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>WeatherVibes</title>
+  </head>
+  <body>
+    <div class="main-information">
+      <header>
+        <h1>
+          Let the
+          <span class="color-vibes">WeatherVibes</span>
+          Guide You
+        </h1>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            id="search-form-input"
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h2 class="weather-app-city" id="weather-city"></h2>
+            <p class="weather-app-details">
+              <span id="time"></span>,
+              <span id="description"></span>
+              <br />
+              Humidity: <strong><span id="humidity"></span>%</strong>, Wind:
+              <strong><span id="wind-speed"></span>km/h</strong>
+              <br />
+              Feels like:
+              <strong><span id="thermal-sensation"></span>°C</strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature">
+            <div id="icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png"
+                class="weather-app-icon"
+              />
+            </div>
+            <div class="weather-app-number" id="current-temperature">12</div>
+            <div class="weather-app-unit">°C</div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        This was coded by
+        <a href="https://github.com/ConstanzaMora" target="_blank"
+          >Constanza Mora</a
+        >
+        is open sourced on
+        <a href="https://github.com/ConstanzaMora/WeatherVibes" target="_blank"
+          >GitHub</a
+        >
+        and hosted on
+        <a href="https://weathervibes-shecodes.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
