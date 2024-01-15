@@ -104,7 +104,7 @@ h2 {
   color: #3c4b55;
   opacity: 0.8;
   display: inline-flex;
-  width: 90%;
+  width: 100%;
 }
 .weather-days-date {
   font-size: 20px;
