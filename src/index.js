@@ -60,7 +60,40 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+<div class="weather-days">
+  <div class="row">
+    <div class="col-2">
+      <div class="weather-days-date">${day}</div>
+      <img
+        src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png"
+        alt=""
+        width="80px"
+      />
+      <div class="weather-days-temperature">
+        <span class="weather-days-temperature-maximum">
+          <strong>18°</strong>
+        </span>
+        <span class="weather-days-temperature-minimum"> 12°</span>
+      </div>
+      </div>
+    </div>
+  </div>
+`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Dresden");
+displayForecast();
