@@ -35,7 +35,7 @@ function formatDate(date) {
     "Monday",
     "Tuesday",
     "Wednesday",
-    "Thusday",
+    "Thursday",
     "Friday",
     "Saturday",
   ];
