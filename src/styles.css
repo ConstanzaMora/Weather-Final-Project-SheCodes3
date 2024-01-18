@@ -62,7 +62,7 @@ h2 {
 }
 .time-color {
   color: #9a82aa;
-  font-size: 18px;
+  font-size: 16px;
 }
 .weather-app-city {
   margin: 0;
@@ -83,6 +83,11 @@ h2 {
 .weather-app-temperature {
   margin-right: 20px;
   display: flex;
+  flex-direction: column;
+}
+.current-temperature-container {
+  display: flex;
+  margin-top: 30px;
 }
 .weather-app-number {
   font-size: 90px;
@@ -112,6 +117,14 @@ h2 {
 .weather-days-date {
   font-size: 20px;
   color: #9a82aa;
+}
+.max-and-min {
+  text-align: right;
+  color: #9a82aa;
+  font-size: 16px;
+}
+.weather-day0-temperature-minimum {
+  opacity: 0.7;
 }
 .weather-days-temperature {
   font-size: 15px;

@@ -44,13 +44,29 @@
               Feels like:
               <strong><span id="thermal-sensation"></span>°C</strong>
               <br />
+              <span class="time-color" id="time"></span>
+            </p>
+          </div>
+          <div class="weather-app-temperature">
+            <div class="current-temperature-container">
+              <div id="icon">
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png"
+                  class="weather-app-icon"
+                />
+              </div>
+              <div class="weather-app-number" id="current-temperature"></div>
+              <div class="weather-app-unit">°C</div>
+            </div>
+            <br />
+            <div class="max-and-min">
               Max:
               <strong
                 ><span
                   class="weather-day0-temperature-maximum"
                   id="today-maximum"
                 ></span
-                ><span>°C</span></strong
+                ><span>°</span></strong
               >
               Min:
               <strong
@@ -58,21 +74,9 @@
                   class="weather-day0-temperature-minimum"
                   id="today-minimum"
                 ></span
-                ><span>°C</span></strong
+                ><span class="weather-day0-temperature-minimum">°</span></strong
               >
-              <br />
-              <span class="time-color" id="time"></span>
-            </p>
-          </div>
-          <div class="weather-app-temperature">
-            <div id="icon">
-              <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png"
-                class="weather-app-icon"
-              />
             </div>
-            <div class="weather-app-number" id="current-temperature"></div>
-            <div class="weather-app-unit">°C</div>
           </div>
         </div>
         <div class="weather-days" id="forecast"></div>
