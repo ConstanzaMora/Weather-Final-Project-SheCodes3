@@ -78,7 +78,7 @@ function displayForecast(response) {
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
-    if (index < 5) {
+    if (index > 0 && index < 6) {
       forecastHtml =
         forecastHtml +
         `
@@ -105,6 +105,18 @@ function displayForecast(response) {
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
+
+  let temperatureMaximumElement = document.querySelector("#today-maximum");
+  let dayMaximum = response.data.daily[0].temperature.maximum;
+  temperatureMaximumElement.innerHTML = Math.round(
+    response.data.daily[0].temperature.maximum
+  );
+
+  let temperatureMinimumElement = document.querySelector("#today-minimum");
+  let dayMinimum = response.data.daily[0].temperature.minimum;
+  temperatureMinimumElement.innerHTML = Math.round(
+    response.data.daily[0].temperature.minimum
+  );
 }
 
 let searchFormElement = document.querySelector("#search-form");
